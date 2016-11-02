@@ -1,30 +1,27 @@
-# posiny-react
-A very tiny POS (pos[t]iny) for Vietnamese online shop owners
-
-## Setup instructions
-
-```shell
-$ npm init
-```
-
-Config files:
-
-```
-.eslintrc.json
-.flowconfig
-webpack.config.json
-```
-
-Edit `package.json` to something like this:
-
-```json
 {
-  ...
+  "name": "posiny-app",
+  "version": "0.0.1",
+  "description": "A very tiny POS (pos[t]iny) for Vietnamese online shop owners",
   "main": "index.js",
   "scripts": {
     "webpack": "webpack-dev-server --progress --colors"
   },
-  ...
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ethan605/posiny-react.git"
+  },
+  "keywords": [
+    "pos",
+    "vietnamese",
+    "shop",
+    "tiny"
+  ],
+  "author": "Ethan N.",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/ethan605/posiny-react/issues"
+  },
+  "homepage": "https://github.com/ethan605/posiny-react#readme",
   "dependencies": {
     "lodash": "^4.16.4",
     "react": "^15.3.2",
@@ -43,12 +40,4 @@ Edit `package.json` to something like this:
     "webpack": "^1.13.2",
     "webpack-dev-server": "^1.16.2"
   }
-  ...
 }
-```
-
-Run `webpack` dev server:
-
-```shell
-$ npm run-script webpack
-```
