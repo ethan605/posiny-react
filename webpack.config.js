@@ -1,7 +1,12 @@
-// import path from 'path';
-// import webpack from 'webpack';
+// Inspired by https://github.com/ModusCreateOrg/budgeting-sample-app
+
+const path = require('path');
+
+const nodeEnv = process.env.NODE_ENV || 'development';
+const isProduction = nodeEnv === 'production';
  
 module.exports = {
+  devtool: isProduction ? 'hidden-source-map' : 'cheap-eval-source-map',
   entry: './index.js',
   output: {
     path: __dirname,
@@ -20,6 +25,12 @@ module.exports = {
           ]
         }
       }
+    ]
+  },
+  resolve: {
+    extensions: ['', '.js', '.jsx'],
+    root: [
+      path.resolve('./')
     ]
   },
 };
